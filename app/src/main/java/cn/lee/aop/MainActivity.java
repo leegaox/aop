@@ -11,23 +11,34 @@ import cn.lee.aop.annotation.Trace;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String TAG = getClass().getSimpleName();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    @Trace("doSpeak")
-    public void doSpeak(View view) {
+    //trace名称，通过Trace的 value()方法获取
+    @Trace("读文件")
+    public void readFile(View view) {
+
+//        long start = System.currentTimeMillis();
+
         //使用Random模仿方法运行时间
-        SystemClock.sleep(Math.abs(new Random().nextInt(500)));
+        SystemClock.sleep(Math.abs(new Random().nextInt(1000)));
+
+//        long duration = System.currentTimeMillis() - start;
+//        Log.i("trace", String.format("功能：%s,耗时：%d ms", "读文件", duration));
     }
 
-    @Trace("doRead")
-    public void doRead(View view) {
+    @Trace("写文件")
+    public void writeFile(View view) {
+
+//       long start = System.currentTimeMillis();
+
         //使用Random模仿方法运行时间
-        SystemClock.sleep(Math.abs(new Random().nextInt(500)));
+        SystemClock.sleep(Math.abs(new Random().nextInt(1000)));
+
+//        long duration = System.currentTimeMillis() - start;
+//        Log.i("trace", String.format("功能：%s,耗时：%d ms", "读文件", duration));
     }
 }
