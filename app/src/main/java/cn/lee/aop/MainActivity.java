@@ -18,7 +18,6 @@ import cn.lee.aop.annotation.Trace;
 import cn.lee.aop.util.PermissionUtil;
 import cn.lee.aop.util.SnackBarBuilder;
 
-import static android.Manifest.permission.BODY_SENSORS;
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CALENDAR;
