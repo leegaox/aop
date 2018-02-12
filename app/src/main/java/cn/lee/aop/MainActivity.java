@@ -18,6 +18,7 @@ import cn.lee.aop.annotation.Trace;
 import cn.lee.aop.util.PermissionUtil;
 import cn.lee.aop.util.SnackBarBuilder;
 
+import static android.Manifest.permission.BODY_SENSORS;
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CALENDAR;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Request Camera Success", Toast.LENGTH_SHORT).show();
                 } else {
                     if (PermissionUtil.shouldShowRequestPermissionRationale(this, CAMERA)) {
-                        new SnackBarBuilder(this, getString(R.string.permission_not_granted), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.white).show();
+                        new SnackBarBuilder(this, getString(R.string.permission_not_granted), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.black).show();
                     } else {
                         PermissionUtil.showAppSettingsSnackBar(this, REQUEST_CAMERA);
                     }
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Request Contacts Success", Toast.LENGTH_SHORT).show();
                 } else {
                     if (PermissionUtil.shouldShowRequestPermissionRationale(this, READ_CONTACTS)) {
-                        new SnackBarBuilder(this, getString(R.string.permission_not_granted), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.white).show();
+                        new SnackBarBuilder(this, getString(R.string.permission_not_granted), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.black).show();
                     } else {
                         PermissionUtil.showAppSettingsSnackBar(this, REQUEST_CONTACTS);
                     }

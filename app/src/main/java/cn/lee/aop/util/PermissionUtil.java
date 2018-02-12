@@ -149,7 +149,7 @@ public class PermissionUtil {
      * @param activity
      */
     private static void showRequestPermissionRationale(final Activity activity, final String permission, final int requestCode) {
-        new SnackBarBuilder(activity, activity.getResources().getStringArray(R.array.permission_rationale)[requestCode], Snackbar.LENGTH_LONG).setBackgroundColor(R.color.white).setAction("OK", new View.OnClickListener() {
+        new SnackBarBuilder(activity, activity.getResources().getStringArray(R.array.permission_rationale)[requestCode], Snackbar.LENGTH_LONG).setBackgroundColor(R.color.black).setAction("OK", new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 requestPermission(activity, permission, requestCode);
@@ -190,7 +190,7 @@ public class PermissionUtil {
      * @param requestCode
      */
     public static void showAppSettingsSnackBar(final Activity mActivity, final int requestCode) {
-        new SnackBarBuilder(mActivity, mActivity.getString(R.string.permission_not_ask), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.white).setAction(mActivity.getString(R.string.permission_enable_now), new View.OnClickListener() {
+        new SnackBarBuilder(mActivity, mActivity.getString(R.string.permission_not_ask), Snackbar.LENGTH_LONG).setBackgroundColor(R.color.black).setAction(mActivity.getString(R.string.permission_enable_now), new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String dangerousGroup[] = mActivity.getResources().getStringArray(R.array.permission_dangergous_group_name);
