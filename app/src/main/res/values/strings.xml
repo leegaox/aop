@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">jar_aop</string>
+
+    <string name="permission_enable_now">立即启用</string>
+    <string name="permission_setting">请点击"权限"，然后打开 </string>
+    <string name="permission_not_ask">已关闭使用该功能的权限</string>
+    <string name="permission_not_granted">所需权限未被授权</string>
 </resources>

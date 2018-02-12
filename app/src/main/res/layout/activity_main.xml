@@ -16,4 +16,17 @@
         android:onClick="writeFile"
         android:text="写文件" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkGroupPermissions"
+        android:text="切面检查运行时权限检测"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkSinglePermission"
+        android:text="运行时权限检测"/>
+
 </LinearLayout>

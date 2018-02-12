@@ -23,15 +23,14 @@ import cn.lee.aop.annotation.Trace;
 public class TraceAspect {
 
     //@Pointcut定义切入点
-    //execution 定义切面上需要执行的被该注解标注的方法
-    //cn.lee.aop.annotation.Trace为注解的全路径
-    //* *(..)代表 在任意类的任意方法使用了Trace注解的地方作为切入点，织入（weave）代码。
+    //execution 定义切面上需要执行的连接点   * *(..)代表 任意类的任意方法。
+    //执行任意类的任意方法注解了cn.lee.aop.annotation.Trace的连接点
     @Pointcut("execution(@cn.lee.aop.annotation.Trace  * *(..))")
-    public void methodAnnotatedWithBehaviorTrace() {
+    public void pointCut() {
     }
 
     //定义Advice，织入代码。
-    @Around("methodAnnotatedWithBehaviorTrace()")
+    @Around("pointCut()")
     public Object weaveJoinPoint(ProceedingJoinPoint joinPoint) throws Throwable {
         //获取功能名称
         MethodSignature sign = (MethodSignature) joinPoint.getSignature();
